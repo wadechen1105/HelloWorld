@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.example.checkinterpolator.CityInputView
+        android:id="@+id/input"
+        style="@style/Suggestions"
+        android:background="@android:color/background_dark"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="@string/app_name"
+        android:imeOptions="actionGo|flagNoExtractUi|flagNoFullscreen"
+        android:inputType="textUri"
+        android:lines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:textCursorDrawable="@null" >
+    </com.example.checkinterpolator.CityInputView>
+
+</LinearLayout>

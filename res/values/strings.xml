@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ToolsForAndroid</string>
+    <string name="interpolator">Checkinterpolator</string>
+    <string name="device_info">Devices Information</string>
+    <string name="accu">Parse AccuWeather</string>
+    <string name="test_dpi">TestDpiFolderActivity</string>
+    <string name="locale" translatable="false">en</string>
+    <string name="curve">Curve</string>
+    <string name="widget">Test Widget</string>
+    <string name="call">Test send Intent</string>
+    <string name="input">Input Url</string>
+    <string name="try_l">Try L style</string>
+    <string name="try_webview">Try WebView</string>
+    <string name="try_ui">Try UI</string>
+    <string name="home_timezone_12_hour" translatable="false"><font face="sans-serif">MMM dd,EE</font><font face="sans-serif" size="14">a</font></string>
+    <string name="f_name">"???"</string>
+    <string name="title_activity_wave">WaveActivity</string>
+    <string name="title_activity_keyevent">KeyEvent</string>
+    <string name="title_activity_fake">Home</string>
+</resources>
