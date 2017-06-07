@@ -35,14 +35,16 @@ public class CheckinterpolatorView extends View {
         mCurvePaint.setColor(Color.BLACK);
 
         mTextPaint = new Paint(Paint.DITHER_FLAG);
-        mTextPaint.setColor(Color.BLUE);
+        mTextPaint.setColor(Color.argb(230, 220, 220 ,220));
         mTextPaint.setAntiAlias(true);
-        mTextPaint.setTypeface(Typeface.DEFAULT_BOLD);
-        mTextPaint.setTextSize(50);
+        mTextPaint.setTypeface(Typeface.DEFAULT);
+        mTextPaint.setTextSize(30);
 
         for (int i = 0; i < OBJ_COUNT; i++) {
             mList.add(selectInterpolator(i));
         }
+
+        setBackgroundColor(Color.rgb(135, 150, 150));
     }
 
     private Interpolator selectInterpolator(int i) {
@@ -88,26 +90,27 @@ public class CheckinterpolatorView extends View {
 
         int x_coordinate = getWidth();
         int y_coordinate = 700;
-        float lineLength = 30.0f;
+        float lineLength = y_coordinate;
 
         canvas.save();
+
+        for (int i = 1; i <= 10; i++) {
+            float poistion = i * 10;
+            // String strY = String.valueOf("|");
+            // String strX = String.valueOf("-");
+            float x = getWidth() * (poistion / 100);
+            float y = getHeight() - (y_coordinate * (poistion / 100));
+            canvas.drawLine(x, getHeight(), x, getHeight() - lineLength, mTextPaint); // y grid line
+            canvas.drawLine(0.0f, y, getWidth(), y, mTextPaint);// x grid line
+            // canvas.drawText(strY, x, getHeight(), mTextPaint);
+            // canvas.drawText(strX, 0, y, mTextPaint);
+        }
+
 
         for (int i = 0; i < POINT_COUNTS; i++) {
             float x = i * 1.0f / POINT_COUNTS;
             float y = mInterpolator.getInterpolation(x);
             canvas.drawPoint(x_coordinate * x, (getHeight() - (y_coordinate * y)), mCurvePaint);
-        }
-
-        for (int i = 1; i <= 4; i++) {
-            float poistion = i * 25;
-            // String strY = String.valueOf("|");
-            // String strX = String.valueOf("-");
-            float x = getWidth() * (poistion / 100);
-            float y = getHeight() - (y_coordinate * (poistion / 100));
-            canvas.drawLine(x, getHeight(), x, getHeight() - lineLength, mTextPaint);
-            canvas.drawLine(0.0f, y, lineLength, y, mTextPaint);
-            // canvas.drawText(strY, x, getHeight(), mTextPaint);
-            // canvas.drawText(strX, 0, y, mTextPaint);
         }
 
         canvas.restore();
