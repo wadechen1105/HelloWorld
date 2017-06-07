@@ -32,7 +32,7 @@ public class CheckinterpolatorActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        getActionBar().setTitle(item.getTitle());
+        getSupportActionBar().setTitle(item.getTitle());
         mView.drawCurve(item.getItemId());
         return super.onOptionsItemSelected(item);
     }
