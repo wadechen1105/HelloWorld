@@ -1,0 +1,32 @@
+{
+  "SystemId": "MB",
+  "StatusCode": "0000",
+  "StatusDesc": "",
+  "ErrorDisplay": "0",
+  "ClientTime": "1410423032490",
+  "Token": "1410428882490",
+  "RsData": {
+    "UpdateTime": "2014/10/22 13:13:17",
+    "Unit": "單位：新臺幣(元)",
+    "LongTermRateInfos": [
+      {
+        "CurrencyCode1": "USD",
+        "CurrencyName1": "美金 (USD)",
+        "Buy": "30.1977",
+        "Sell": "30.4601"
+      },
+      {
+        "CurrencyCode1": "JPY",
+        "CurrencyName1": "日圓 (JPY)",
+        "Buy": "0.2927",
+        "Sell": "0.3001"
+      },
+      {
+        "CurrencyCode1": "EUR",
+        "CurrencyName1": "歐元 (EUR)",
+        "Buy": "41.2767",
+        "Sell": "42.1293"
+      }
+    ]
+  }
+}

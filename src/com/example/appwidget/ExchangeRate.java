@@ -15,7 +15,7 @@ import java.util.ArrayList;
  **/
 public class ExchangeRate {
 
-    private ArrayList<Currency> mCurrencyList;
+    private ArrayList<CurrencyType> mCurrencyList;
     private String mSystemId;
     private int mStatusCode;
     private String mStatusDesc;
@@ -25,7 +25,7 @@ public class ExchangeRate {
     private String mUpdateTime;
     private String mUnit;
 
-    public ArrayList<Currency> getCurrencyList() {
+    public ArrayList<CurrencyType> getCurrencyList() {
         return mCurrencyList;
     }
 
@@ -83,7 +83,7 @@ public class ExchangeRate {
 
             L.d(rsData.toString());
             String jsonArr = rsData.getJSONArray("LongTermRateInfos").toString();
-            Type listType = new TypeToken<ArrayList<Currency>>() {
+            Type listType = new TypeToken<ArrayList<CurrencyType>>() {
             }.getType();
             Gson gson = new Gson();
             detailData.mCurrencyList = gson.fromJson(jsonArr, listType);
@@ -94,7 +94,7 @@ public class ExchangeRate {
         return detailData;
     }
 
-    class Currency {
+    public static class CurrencyType {
         //Currency code
         @SerializedName("CurrencyCode1")
         private String mCurrencyCode1;

@@ -6,6 +6,7 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.example.appwidget.ExchangeRate;
+import com.example.appwidget.L;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +16,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import static com.example.appwidget.ExchangeRate.CurrencyType;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(AndroidJUnit4.class)
 public class CommonTest {
@@ -45,7 +48,14 @@ public class CommonTest {
             buffer.append(line + "\n");
         }
 
-        ExchangeRate.fromJsonString(buffer.toString());
+        ExchangeRate er = ExchangeRate.fromJsonString(buffer.toString());
+
+        assertEquals(er.getClientTime(), "1410423032490");
+        assertTrue(!er.getCurrencyList().isEmpty());
+
+        for (CurrencyType c : er.getCurrencyList()) {
+            L.i(c.getCurrencyName1());
+        }
 
     }
 }
