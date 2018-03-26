@@ -19,5 +19,6 @@
     <string name="title_activity_wave">WaveActivity</string>
     <string name="title_activity_keyevent">KeyEvent</string>
     <string name="title_activity_fake">Home</string>
+    <string name="drag_activity">Draw and drag</string>
     <string name="widget_title">mobile bank</string>
 </resources>

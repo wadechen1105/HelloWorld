@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.example.tool"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tool">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_GPS"/>
-    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS"/>
-    <uses-permission android:name="android.permission.ACCESS_LOCATION"/>
-    <!--<uses-permission-->
-        <!--android:name="com.uperone.permission.SERVICE"/>-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION" />
 
+    <!-- <uses-permission -->
+    <!-- android:name="com.uperone.permission.SERVICE"/> -->
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -26,96 +25,108 @@
             android:label="@string/app_name"
             android:launchMode="singleInstance">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.checkinterpolator.CheckinterpolatorActivity"
             android:label="@string/interpolator">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.checkinterpolator.CheckDeviceInfomationActivity"
             android:label="@string/device_info">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
-                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
                     android:host="tools"
-                    android:scheme="http"/>
+                    android:scheme="http" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.drawcurve.CurveActivity"
             android:label="@string/curve">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.checkinterpolator.TryUIActivity"
             android:label="@string/try_ui">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.webviewtest.WebView1"
             android:label="@string/try_webview">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.tryl.TrylActivity"
             android:label="@string/try_l">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.wave.WaveActivity"
             android:label="@string/title_activity_wave">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.example.widget.KeyActivity"
             android:label="@string/title_activity_keyevent">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="com.example.CATEGORY_TOOLS"/>
+                <category android:name="com.example.CATEGORY_TOOLS" />
             </intent-filter>
         </activity>
         <activity
-            android:launchMode="singleTask"
             android:name="com.example.widget.A"
-            android:label="@string/title_activity_fake">
+            android:label="@string/title_activity_fake"
+            android:launchMode="singleTask"></activity>
+
+        <activity
+            android:name="com.example.draganddraw.DragActivity"
+            android:label="@string/drag_activity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.example.CATEGORY_TOOLS" />
+            </intent-filter>
         </activity>
+
         <receiver android:name="com.example.appwidget.ViewFilpAppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -130,7 +141,8 @@
             android:name="com.example.appwidget.WidgetService"
             android:enabled="true"
             android:exported="true"
-            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
     </application>
 
 </manifest>

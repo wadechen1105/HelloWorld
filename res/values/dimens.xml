@@ -15,4 +15,7 @@
     <dimen name="weather_time_scale_textsize">10sp</dimen>
     <dimen name="weather_time_interval_height">30dp</dimen>
     <dimen name="test_textsize">20sp</dimen>
+
+    <integer name="viewfinder_border_width">10</integer>
+    <integer name="viewfinder_border_length">100</integer>
 </resources>
